@@ -22,4 +22,9 @@ app.use(ElementPlus, {
 import Echart from "@/components/Echart.vue";
 app.component("Echart", Echart);
 
+import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+  app.component(key, component)
+}
+
 app.mount("#app");

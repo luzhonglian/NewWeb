@@ -1,8 +1,8 @@
 import { createWebHashHistory, createRouter } from "vue-router";
 
-import Home from "@/views/Home/Home.vue";
-
-const routes = [{ path: "/", component: Home }];
+const routes = [
+  { path: "/", component: () => import("@/views/Home/Home.vue") },
+];
 
 const router = createRouter({
   history: createWebHashHistory(),
