@@ -26,7 +26,7 @@ const _style = computed(() => {
 });
 nextTick(() => {
   /// 用nextTick确保dom已经渲染完成,可确保能拿到正确的父组件宽高
-  chartInstance = echarts.init(EchartRef.value);
+  chartInstance = echarts.init(EchartRef.value, null, { locale: "ZH" });
 });
 
 //`传入的的高宽改变会resize
