@@ -16,12 +16,18 @@ const props = defineProps({
     type: [String, Number],
     default: "100%",
   },
+  background: {
+    type: String,
+    default: "unset",
+  },
 });
 
 const _style = computed(() => {
+  const { width, height, background } = props;
   return {
-    width: props.width,
-    height: props.height,
+    width: isNaN(+width) ? width : `${width}px`,
+    height: isNaN(+height) ? height : `${height}px`,
+    background,
   };
 });
 nextTick(() => {
