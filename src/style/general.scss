@@ -1,12 +1,16 @@
 /// 全局样式
 /* 多行省略 */
-.multi-line-ellipsis {
+.mul-el {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2 !important;
   line-clamp: 2 !important;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.f {
+  display: flex;
 }
 
 .flex {
@@ -17,18 +21,18 @@
   flex-wrap: wrap;
 }
 
-.flex-center {
+.f-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-col {
+.f-col {
   display: flex;
   flex-direction: column;
 }
 
-.flex-col-center {
+.f-c-c {
   display: flex;
   flex-direction: column;
   justify-content: center;
